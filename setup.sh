@@ -1,10 +1,5 @@
 ###################### SETUP VIM #####################################
 
-# swap file dump
-if [ ! -d /var/tmp/ryan-vim ]; then
-	mkdir /var/tmp/ryan-vim
-fi
-
 # pathogen
 mkdir -p ~/.vim
 mkdir -p ~/.vim/autoload
