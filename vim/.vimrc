@@ -17,8 +17,8 @@ let mapleader=","
 :set clipboard=unnamed
 :set encoding=utf8
 :set guifont=Inconsolata\ for\ Powerline\ Plus\ Nerd\ File\ Types:h18
-:set backupdir=/var/tmp/ryan-vim//
-:set directory=/var/tmp/ryan-vim//
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
 
 autocmd vimenter * NERDTree
 let NERDTreeShowHidden=1
