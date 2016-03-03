@@ -34,8 +34,6 @@ map <C-n> :NERDTreeToggle<CR>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='luna'
 
-let g:goyo_width=120
-
 nnoremap <leader>b :ls<cr>:b<space>
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
