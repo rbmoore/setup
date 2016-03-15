@@ -55,4 +55,12 @@ if [ $os == "linux-gnu" ]; then
 
 	cp ./vim/font/*.otf ~/.fonts
 fi
+
+if [ $os == "darwin" ]; then
+	if [[ ! -d ~/Library/Fonts ]]; then
+		mkdir -p ~/Library/Fonts
+	fi
+
+	cp ./vim/font/*.otf ~/Library/Fonts
+fi
 ######################################################################
