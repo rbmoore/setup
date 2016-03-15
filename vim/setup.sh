@@ -45,4 +45,14 @@ curl -LSso ~/.vim/syntax/ejs.vim https://raw.githubusercontent.com/emilis/emilis
 cp ./vim/.vimrc ~/.vim/
 cp ./vim/.vimrc-basic ~/.vim/
 ln -s ~/.vim/.vimrc ~/.vimrc
+
+# font
+
+if [ $os == "linux-gnu" ]; then
+	if [[ ! -d ~/.fonts ]]; then
+		mkdir -p ~/.fonts
+	fi
+
+	cp ./vim/font/*.otf ~/.fonts
+fi
 ######################################################################

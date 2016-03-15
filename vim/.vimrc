@@ -16,7 +16,7 @@ let mapleader=","
 :set number
 :set clipboard=unnamed
 :set encoding=utf8
-:set guifont=Inconsolata\ for\ Powerline\ Plus\ Nerd\ File\ Types:h18
+:set guifont=Inconsolata\ for\ Powerline\ Nerd\ Font\ Complete:h18
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 
