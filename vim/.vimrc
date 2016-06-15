@@ -24,7 +24,7 @@ autocmd vimenter * NERDTree
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.\.$', '\.$', '\~$', '.DS_Store', '.git', '.idea']
 
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_check_on_open = 1
 
 map <C-f> :BetterSearchPromptOn<CR>
@@ -37,7 +37,6 @@ let g:airline_theme='luna'
 nnoremap <leader>b :ls<cr>:b<space>
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
-au BufNewFile,BufRead */templates/*.html set filetype=ejs
 
 imap jj <esc>
 
@@ -49,27 +48,27 @@ au InsertLeave * match ExtraWhiteSpace /\S\zs\s\+$/
 
 autocmd CompleteDone * pclose
 
-function s:find_jshintrc(dir)
-    let l:found = globpath(a:dir, '.jshintrc')
+function s:find_eslintrc(dir)
+    let l:found = globpath(a:dir, '.eslintrc')
     if filereadable(l:found)
         return l:found
     endif
 
     let l:parent = fnamemodify(a:dir, ':h')
     if l:parent != a:dir
-        return s:find_jshintrc(l:parent)
+        return s:find_eslintrc(l:parent)
     endif
 
-    return "~/.jshintrc"
+    return "~/.eslintrc"
 endfunction
 
-function UpdateJsHintConf()
+function UpdateEslintConf()
     let l:dir = expand('%:p:h')
-    let l:jshintrc = s:find_jshintrc(l:dir)
-    let g:syntastic_javascript_jshint_args = l:jshintrc
+    let l:eslintrc = s:find_eslintrc(l:dir)
+    let g:syntastic_javascript_eslint_args = l:eslintrc
 endfunction
 
-au BufEnter * call UpdateJsHintConf()
+au BufEnter * call UpdateEslintConf()
 
 let g:ctrlp_working_path_mode = 0
 

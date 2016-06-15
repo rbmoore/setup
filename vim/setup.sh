@@ -15,7 +15,7 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 mkdir -p ~/.vim/bundle
 
 git clone https://github.com/lilydjwg/colorizer ~/.vim/bundle/colorizer
-git clone https://github.com/wookiehangover/jshint.vim.git ~/.vim/bundle/jshint.vim
+#git clone https://github.com/wookiehangover/jshint.vim.git ~/.vim/bundle/jshint.vim
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 git clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
 git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
@@ -38,8 +38,13 @@ mkdir -p ~/.vim/plugin
 curl -LSso ~/.vim/plugin/bufkill.vim https://raw.githubusercontent.com/qpkorr/vim-bufkill/master/plugin/bufkill.vim
 
 # syntax
-mkdir -p ~/.vim/syntax
-curl -LSso ~/.vim/syntax/ejs.vim https://raw.githubusercontent.com/emilis/emilis-config/master/.vim/syntax/ejs.vim
+cp ./vim/.eslintrc ~/.eslintrc
+npm install -g eslint
+npm install -g babel-eslint
+npm install -g eslint-plugin-react
+
+#mkdir -p ~/.vim/syntax
+#curl -LSso ~/.vim/syntax/ejs.vim https://raw.githubusercontent.com/emilis/emilis-config/master/.vim/syntax/ejs.vim
 
 # .vimrc
 cp ./vim/.vimrc ~/.vim/
