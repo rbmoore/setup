@@ -11,10 +11,10 @@ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 (find ~/.oh-my-zsh -type d -name ".git" && find ~/.oh-my-zsh -name ".gitignore" && find ~/.oh-my-zsh -name ".gitmodules" ) | xargs rm -rf
 
 # .zshrc
-cp .zshrc ~/.zshrc
+cp ./zsh/.zshrc ~/.zshrc
 
 # theme
-cp ./themes/ryan.zsh-theme ~/.oh-my-zsh/themes/ryan.zsh-theme
+cp ./zsh/themes/ryan.zsh-theme ~/.oh-my-zsh/themes/ryan.zsh-theme
 
 # change default shell to zsh
 chsh -s /bin/zsh
