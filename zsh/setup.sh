@@ -16,3 +16,6 @@ cp .zshrc ~/.zshrc
 # theme
 cp ./themes/ryan.zsh-theme ~/.oh-my-zsh/themes/ryan.zsh-theme
 
+# change default shell to zsh
+chsh -s /bin/zsh
+
