@@ -13,6 +13,7 @@ let mapleader=","
 :set noexpandtab
 :set nowrap
 :set mouse=a
+:set ttymouse=xterm2
 :set number
 :set clipboard=unnamed
 :set encoding=utf8
