@@ -21,16 +21,21 @@ let mapleader=","
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 
-autocmd vimenter * NERDTree
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.\.$', '\.$', '\~$', '.DS_Store', '.git', '.idea']
+"netrw folder explorer""""""""""""
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
 
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_check_on_open = 1
+augroup ProjectDrawer
+	autocmd!
+	autocmd VimEnter * :Vexplore
+augroup END
+"""""""""""""""""""""""""""""""""
 
 map <C-f> :BetterSearchPromptOn<CR>
 map <C-x> :BW<CR>
-map <C-n> :NERDTreeToggle<CR>
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='luna'
@@ -39,15 +44,13 @@ nnoremap <leader>b :ls<cr>:b<space>
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
-imap jj <esc>
-
+" Hightlight any extraneous white space at the end of lines
 highlight ExtraWhitespace ctermbg=red guibg=Brown
 au ColorScheme * highlight ExtraWhitespace guibg=red
 au BufEnter * match ExtraWhitespace /\S\zs\s\+$/
 au InsertEnter * match ExtraWhitespace /\S\zs\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\S\zs\s\+$/
-
-autocmd CompleteDone * pclose
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 function s:find_eslintrc(dir)
     let l:found = globpath(a:dir, '.eslintrc')
@@ -70,7 +73,5 @@ function UpdateEslintConf()
 endfunction
 
 au BufEnter * call UpdateEslintConf()
-
-let g:ctrlp_working_path_mode = 0
 
 :cd ~/Documents/Code

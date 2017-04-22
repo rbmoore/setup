@@ -10,9 +10,6 @@ fi
 # install oh-my-zsh
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
-# remove git files/folders
-(find ~/.oh-my-zsh -type d -name ".git" && find ~/.oh-my-zsh -name ".gitignore" && find ~/.oh-my-zsh -name ".gitmodules" ) | xargs rm -rf
-
 # .zshrc
 cp ./zsh/.zshrc ~/.zshrc
 
