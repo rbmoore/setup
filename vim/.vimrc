@@ -21,18 +21,13 @@ let mapleader=","
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 
-"netrw folder explorer""""""""""""
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-let g:netrw_list_hide= '\.git/$,^\.DS_Store$'
+"nerdtree folder explorer""""""""""""
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.\.$', '\.$', '\~$', '.DS_Store', '.git', '.idea']
 
-augroup ProjectDrawer
-	autocmd!
-	autocmd VimEnter * :Vexplore
-augroup END
+map <C-n> :NERDTreeToggle<CR>
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
 """""""""""""""""""""""""""""""""
 
 map <C-f> :BetterSearchPromptOn<CR>
@@ -53,26 +48,8 @@ au InsertEnter * match ExtraWhitespace /\S\zs\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\S\zs\s\+$/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-function s:find_eslintrc(dir)
-    let l:found = globpath(a:dir, '.eslintrc')
-    if filereadable(l:found)
-        return l:found
-    endif
-
-    let l:parent = fnamemodify(a:dir, ':h')
-    if l:parent != a:dir
-        return s:find_eslintrc(l:parent)
-    endif
-
-    return "~/.eslintrc"
-endfunction
-
-function UpdateEslintConf()
-    let l:dir = expand('%:p:h')
-    let l:eslintrc = s:find_eslintrc(l:dir)
-    let g:syntastic_javascript_eslint_args = l:eslintrc
-endfunction
-
-au BufEnter * call UpdateEslintConf()
+" ALE linting """""""""""""""""""""""""""""""""""""""""""""
+let g:ale_open_list = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 :cd ~/Documents/Code
