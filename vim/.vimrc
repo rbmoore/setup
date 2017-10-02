@@ -51,5 +51,3 @@ au InsertLeave * match ExtraWhiteSpace /\S\zs\s\+$/
 " ALE linting """""""""""""""""""""""""""""""""""""""""""""
 let g:ale_open_list = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-:cd ~/Documents/Code
