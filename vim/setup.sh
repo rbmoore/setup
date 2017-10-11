@@ -26,6 +26,7 @@ git clone https://github.com/ryanoasis/vim-webdevicons ~/.vim/bundle/webdevicons
 git clone git://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
 git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
 git clone git@github.com:w0rp/ale.git ~/.vim/bundle/ale
+git clone https://github.com/jelera/vim-javascript-syntax.git ~/.vim/bundle/vim-javascript-syntax
 git clone git@github.com:mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 
