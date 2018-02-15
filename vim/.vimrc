@@ -23,7 +23,7 @@ set directory=~/.vim/swp//
 
 "nerdtree folder explorer""""""""""""
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.\.$', '\.$', '\~$', '.DS_Store', '.git', '.idea']
+let NERDTreeIgnore=['\.\.$', '\.$', '\~$', '.DS_Store', '.git[[dir]]', '.idea']
 
 map <C-n> :NERDTreeToggle<CR>
 autocmd VimEnter * NERDTree
