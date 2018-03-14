@@ -4,7 +4,7 @@
 [layouts]
   [[default]]
     [[[child1]]]
-      command = ""
+      command = /bin/zsh
       directory = /home/ryan.moore/Documents/code/
       parent = window0
       profile = default
