@@ -1,4 +1,12 @@
 ###################### SETUP VIM #####################################
+# update to latest vim
+git clone https://github.com/vim/vim.git viminstall
+cd ./viminstall/src
+make VIMRUNTIMEDIR=/usr/local/share/vim/vim80
+sudo make
+sudo make install
+cd ../..
+sudo rm -rf ./viminstall
 
 # clean existing
 rm ~/.vimrc
