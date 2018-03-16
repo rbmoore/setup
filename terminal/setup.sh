@@ -3,8 +3,9 @@ if [ $os == "linux-gnu" ]; then
 	if ! [ -x "$(command -v terminator)" ]; then
 		sudo add-apt-repository ppa:gnome-terminator
 		sudo apt-get update
-		sudo apt-get install terminator
 	fi
+
+	sudo apt-get install terminator
 
 	if [ -f ~/.config/terminator/config ]; then
 		rm ~/.config/terminator/config

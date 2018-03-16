@@ -81,7 +81,9 @@ source $ZSH/oh-my-zsh.sh
 
 alias ls="ls -aGh"
 
-test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+if [ $os == "darwin" ]; then
+	test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+fi
 
 # Java
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home
@@ -89,3 +91,7 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home
 # Colors
 export CLICOLOR=1
 export TERM=xterm-256color
+
+if [ -f ~/.zshrc-extras ]; then
+	source ~/.zshrc-extras
+fi
