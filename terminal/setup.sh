@@ -7,7 +7,7 @@ if [ $os == "linux-gnu" ]; then
 
 	sudo apt-get install terminator
 
-	if [ -f ~/.config/terminator/config ]; then
+	if [ -f "~/.config/terminator/config" ]; then
 		rm ~/.config/terminator/config
 	fi
 
