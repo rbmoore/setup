@@ -37,6 +37,7 @@ git clone git@github.com:w0rp/ale.git ~/.vim/bundle/ale
 git clone https://github.com/jelera/vim-javascript-syntax.git ~/.vim/bundle/vim-javascript-syntax
 git clone git@github.com:mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 
 # remove git files/folders
 (find ~/.vim/bundle -type d -name ".git" && find ~/.vim/bundle -name ".gitignore" && find ~/.vim/bundle -name ".gitmodules" ) | xargs rm -rf

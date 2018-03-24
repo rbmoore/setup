@@ -1,6 +1,12 @@
 # clean existing
-rm ~/.zshrc
-rm -rf ~/.oh-my-zsh
+
+if [ -d "~/.zshrc" ]; then
+	rm ~/.zshrc
+fi
+
+if [ -d "~/.oh-my-zsh" ]; then
+	rm -rf ~/.oh-my-zsh
+fi
 
 # install zsh
 if [ $os == "linux-gnu" ]; then
