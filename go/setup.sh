@@ -20,6 +20,18 @@ sudo tar -C /usr/local -xzf go.tar.gz
 
 rm go.tar.gz
 
+#install Glide for go pkg management
+if [ $os == "linux-gnu" ]; then
+	sudo add-apt-repository ppa:masterminds/glide
+	sudo apt-get update
+	sudo apt-get install glide
+fi
+
+if [ $os == "darwin" ]; then
+	brew install glide
+fi
+
 #append config to .zshrc
 echo "export PATH=\$PATH:/usr/local/go/bin" >> $HOME/.zshrc
+echo "export GOBIN=/usr/local/go/bin" >> $HOME/.zshrc
 echo "export GOPATH=\$HOME/Documents/code/go" >> $HOME/.zshrc

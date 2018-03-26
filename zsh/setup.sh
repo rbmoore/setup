@@ -22,6 +22,9 @@ cp ./zsh/.zshrc ~/.zshrc
 # theme
 cp ./zsh/themes/ryan.zsh-theme ~/.oh-my-zsh/themes/ryan.zsh-theme
 
+# refresh terminal
+source ~/.zshrc
+
 # change default shell to zsh
 chsh -s /bin/zsh
 
