@@ -1,10 +1,10 @@
 # clean existing
 
-if [ -d "~/.zshrc" ]; then
+if [ -f ~/.zshrc ]; then
 	rm ~/.zshrc
 fi
 
-if [ -d "~/.oh-my-zsh" ]; then
+if [ -d ~/.oh-my-zsh ]; then
 	rm -rf ~/.oh-my-zsh
 fi
 

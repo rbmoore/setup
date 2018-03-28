@@ -66,6 +66,6 @@ export CLICOLOR=1
 
 export TERM=xterm-256color
 
-if [ -f "~/.zshrc-extras" ]; then
+if [ -f ~/.zshrc-extras ]; then
 	source ~/.zshrc-extras
 fi
