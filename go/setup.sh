@@ -4,7 +4,7 @@ if [ -d "/usr/local/go" ]; then
 	sudo rm -rf /usr/local/go
 fi
 
-GO_VERSION="1.10"
+GO_VERSION="1.12"
 
 if [ $os == "linux-gnu" ]; then
 	GO_ARCH="linux-amd64"

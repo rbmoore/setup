@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # clean existing
 
 if [ -f ~/.zshrc ]; then
@@ -9,7 +11,7 @@ if [ -d ~/.oh-my-zsh ]; then
 fi
 
 # install zsh
-if [ $os == "linux-gnu" ]; then
+if [ "$os" == "linux-gnu" ]; then
 	sudo apt-get install zsh
 fi
 

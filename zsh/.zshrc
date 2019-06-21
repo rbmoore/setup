@@ -58,9 +58,6 @@ source $ZSH/oh-my-zsh.sh
 alias ls="ls -aGh"
 alias k="kubectl"
 
-# Java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home
-
 # Colors
 export CLICOLOR=1
 
