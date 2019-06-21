@@ -52,17 +52,23 @@ plugins=(git)
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export PATH=$PATH:/snap/bin
+
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias ls="ls -aGh"
 alias k="kubectl"
+alias slack="weechat"
 
-# Colors
-export CLICOLOR=1
+export PATH=$PATH:/opt/xfreerdp/bin
 
-export TERM=xterm-256color
+# add bash exports
+find $HOME/Documents/bash/exports/ -type f | while read -r file; do
+	. $file
+done
 
-if [ -f ~/.zshrc-extras ]; then
-	source ~/.zshrc-extras
-fi
+# add bash command extensions
+find $HOME/Documents/bash/commands/ -type f | while read -r file; do
+	. $file
+done
