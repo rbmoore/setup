@@ -9,3 +9,4 @@ echo ""
 . ./task/setup.sh
 . ./go/setup.sh
 . ./nvm/setup.sh
+. ./vscode/setup.sh
