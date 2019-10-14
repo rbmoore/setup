@@ -9,4 +9,5 @@ echo ""
 . ./task/setup.sh
 . ./go/setup.sh
 . ./nvm/setup.sh
+. ./dotnet/setup.sh
 . ./vscode/setup.sh
