@@ -11,3 +11,4 @@ echo ""
 . ./nvm/setup.sh
 . ./dotnet/setup.sh
 . ./vscode/setup.sh
+. ./dive/setup.sh
